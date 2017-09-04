@@ -21,7 +21,6 @@ make
 ./particle_filter
 
 ```
-
 If everything goes well, you could see the below output from the simulator:
 
 ```
@@ -29,25 +28,21 @@ Success! Your particle filter passed!
 ```
 
 ## Particle Filter Implementation
+
 ### Particle filter flowchart for this project
 ![alt text][pf_flowchart]
 [pf_flowchart]: ./media/PF_flowchart.png 
 
 ### Source Code 
 The directory structure of this repository is as follows:
-
 ```
 root
-|   build.sh
-|   clean.sh
 |   CMakeLists.txt
 |   README.md
-|   run.sh
 |
 |___data
 |   |   
 |   |   map_data.txt
-|   
 |   
 |___src
     |   helper_functions.h
@@ -57,31 +52,21 @@ root
     |   particle_filter.h
 ```
  `particle_filter.cpp` in the `src` directory contains the scaffolding of a `ParticleFilter` class and some associated methods.
-
  `src/main.cpp` contains the code that actually run the particle filter and call the associated methods.
 
 
 ### Inputs to the Particle Filter
-Input values to the particle filter are provided by the simulator to the c++ program
-
-#### The Map*
-`map_data.txt` includes the position of landmarks (in meters) on an arbitrary Cartesian coordinate system. Each row has three columns
-1. x position
-2. y position
-3. landmark id
-
-> * Map data provided by 3D Mapping Solutions GmbH.
-
+Sensor input values to the particle filter are provided by the simulator to the c++ program
 
 #### Control Data
 
 // sense noisy position data from the simulator
 
-["sense_x"] 
+["sense_x"]
 
-["sense_y"] 
+["sense_y"]
 
-["sense_theta"] 
+["sense_theta"]
 
 // get the previous velocity (in meters per second) and yaw rate (in radians per second) to predict the particle's transitioned state
 
@@ -93,12 +78,21 @@ Input values to the particle filter are provided by the simulator to the c++ pro
 
 // receive noisy observation data from the simulator, in a respective list of x/y values
 
-["sense_observations_x"] 
+["sense_observations_x"]
 
-["sense_observations_y"] 
+["sense_observations_y"]
 
-#### Output Data
-Output values provided by the c++ program to the simulator
+#### The Map*
+`map_data.txt` includes the position of landmarks (in meters) on an arbitrary Cartesian coordinate system. Each row has three columns
+1. x position
+2. y position
+3. landmark id
+
+> * Map data provided by 3D Mapping Solutions GmbH.
+
+
+### Output From the Particle Filter
+Output values provided by the c++ program to the simulator.
 
 // best particle values used for calculating the error evaluation
 
@@ -108,7 +102,7 @@ Output values provided by the c++ program to the simulator
 
 ["best_particle_theta"] 
 
-#### Other Data
+### Other Data
 //Optional message data used for debugging particle's sensing and associations
 
 // for respective (x,y) sensed positions ID label 
