@@ -18,32 +18,26 @@ In this project a 2 dimensional particle filter in C++ has been implemented. The
   * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 
-## Running the Code
+## Build Instructions
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
 This repository includes two files that can be used to set up and intall uWebSocketIO for either Linux or Mac systems. For windows you can use either Docker, VMware, or even Windows 10 Bash on Ubuntu to install uWebSocketIO.
 
 Once the install for uWebSocketIO is complete, the main program can be built and ran by doing the following from the project top directory.
 
-```
-mkdir build && cd build
-cmake .. && make
-./particle_filter
-```
-
-If everything goes well, you could see the below output from the simulator:
-
-```
-Success! Your particle filter passed!
-```
+1. Clone this repo.
+2. Make a build directory: `mkdir build && cd build`
+3. Compile: `cmake .. && make`
+4. Run it: `./particle_filter`.
 
 ## Particle Filter Implementation
 
 ### Particle filter flowchart for this project
 ![alt text][pf_flowchart]
+
 [pf_flowchart]: ./media/PF_flowchart.png 
 
-### Source Code 
+### Source Code Structure
 The directory structure of this repository is as follows:
 ```
 root
