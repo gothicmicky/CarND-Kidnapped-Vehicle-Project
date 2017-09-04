@@ -6,7 +6,19 @@ A robot has been kidnapped and transported to a new location! Luckily it has a m
 
 In this project a 2 dimensional particle filter in C++ has been implemented. The particle filter is given a map and some initial localization information (analogous to what a GPS would provide). At each time step the filter also gets observation and control data. 
 
-### Running the Code
+## Dependencies
+* cmake >= 3.5
+ * All OSes: [click here for installation instructions](https://cmake.org/install/)
+* make >= 4.1
+  * Linux: make is installed by default on most Linux distros
+  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
+  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
+* gcc/g++ >= 5.4
+  * Linux: gcc / g++ is installed by default on most Linux distros
+  * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
+  * Windows: recommend using [MinGW](http://www.mingw.org/)
+
+## Running the Code
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
 This repository includes two files that can be used to set up and intall uWebSocketIO for either Linux or Mac systems. For windows you can use either Docker, VMware, or even Windows 10 Bash on Ubuntu to install uWebSocketIO.
@@ -14,13 +26,11 @@ This repository includes two files that can be used to set up and intall uWebSoc
 Once the install for uWebSocketIO is complete, the main program can be built and ran by doing the following from the project top directory.
 
 ```
-mkdir build
-cd build
-cmake ..
-make
+mkdir build && cd build
+cmake .. && make
 ./particle_filter
-
 ```
+
 If everything goes well, you could see the below output from the simulator:
 
 ```
