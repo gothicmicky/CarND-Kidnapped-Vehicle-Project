@@ -30,8 +30,8 @@ Success! Your particle filter passed!
 
 ## Particle Filter Implementation
 ### Particle filter flowchart for this project
-![alt text][pf_flow_chart]
-[pf_flow_chart]: ./media/PF_flow_chart.png 
+![alt text][pf_flowchart]
+[pf_flowchart]: ./media/PF_flowchart.png 
 
 ### Source Code 
 The directory structure of this repository is as follows:
