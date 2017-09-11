@@ -26,27 +26,25 @@ This repository includes two files that can be used to set up and intall uWebSoc
 Once the install for uWebSocketIO is complete, the main program can be built and ran by doing the following from the project top directory.
 
 1. Clone this repo.
-2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./particle_filter`.
+2. 'bash clean.sh'
+3. Compile: 'bash build.sh'
+4. Run it: `bash run.sh`
 
-## Particle Filter Implementation
-
-### Particle filter flowchart for this project
-![alt text][pf_flowchart]
-
-[pf_flowchart]: ./media/PF_flowchart.png 
-
-### Source Code Structure
+## Source Code Structure
 The directory structure of this repository is as follows:
+
 ```
 root
+|   build.sh
+|   clean.sh
 |   CMakeLists.txt
 |   README.md
+|   run.sh
 |
 |___data
 |   |   
 |   |   map_data.txt
+|   
 |   
 |___src
     |   helper_functions.h
@@ -55,9 +53,16 @@ root
     |   particle_filter.cpp
     |   particle_filter.h
 ```
+
  `particle_filter.cpp` in the `src` directory contains the scaffolding of a `ParticleFilter` class and some associated methods.
  `src/main.cpp` contains the code that actually run the particle filter and call the associated methods.
 
+## Particle Filter Implementation
+
+### Particle filter flowchart for this project
+![alt text][pf_flowchart]
+
+[pf_flowchart]: ./media/PF_flowchart.png 
 
 ### Inputs to the Particle Filter
 Sensor input values to the particle filter are provided by the simulator to the c++ program
@@ -120,13 +125,12 @@ Output values provided by the c++ program to the simulator.
 ["best_particle_sense_y"] <= list of sensed y positions
 
 
-> **NOTE**
+> **NOTES**
 > The vehicle's coordinate system is NOT the map coordinate system.
-> Transformation (rotation + translation) is required.
-
+> The observations are given in the VEHICLE'S coordinate system. However, the particles are located according to the MAP'S coordinate system. Transformation (rotation + translation) is required. See more details on tranformation [here](https://www.willamette.edu/~gorr/classes/GeneralGraphics/Transforms/transforms2d.htm) and the equations [here](http://planning.cs.uiuc.edu/node99.html)
 
 ## Success Criteria
-1. **Accuracy**: your particle filter should localize vehicle position and yaw to within the values specified in the parameters `max_translation_error` and `max_yaw_error` in `src/main.cpp`.
+1. **Accuracy**: the particle filter should localize vehicle position and yaw to within the values specified in the parameters `max_translation_error` and `max_yaw_error` in `src/main.cpp`.
 
 2. **Performance**: the particle filter should complete execution within the time of 100 seconds.
 
