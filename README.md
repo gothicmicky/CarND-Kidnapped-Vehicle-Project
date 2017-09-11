@@ -14,7 +14,7 @@ In this project a 2 dimensional particle filter in C++ has been implemented. The
 - [Vehicle tracking using projective particle filter](https://www.researchgate.net/publication/46300863_Vehicle_Tracking_Using_Projective_Particle_Filter)
 - [Overlapped Vehicle Tracking via Enhancement of Particle Filter with Adaptive Resampling Algorithm](http://ijssst.info/Vol-12/No-3/paper7.pdf)
 - [Unscented Kalman filters and Particle Filter methods for nonlinear state estimation](http://ac.els-cdn.com/S2212017313006427/1-s2.0-S2212017313006427-main.pdf?_tid=e36cf932-5fd6-11e7-b1c1-00000aab0f27&acdnat=1499076400_c257df4f75a916408abbf14f078be8e2)
-
+- [The Unscented Kalman Filter and Particle Filter Methods for Nonlinear Structural System Identification with Non-Collocated Heterogeneous Sensing](http://www.columbia.edu/cu/civileng/smyth/papers/stcdoc_rev_4.pdf)
 
 ## Dependencies
 * cmake >= 3.5
