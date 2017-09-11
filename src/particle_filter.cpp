@@ -85,15 +85,21 @@ void ParticleFilter::prediction(double delta_t, double std_pos[], double velocit
     // \theta_{t+1} = \theta_{t} + \dot\theta dt
 
     for (int i=0; i< num_particles; i++) {
-
         std::normal_distribution<double> pos_x_noise (0, std_pos[0]);
         std::normal_distribution<double> pos_y_noise (0, std_pos[1]);
         std::normal_distribution<double> pos_theta_noise (0, std_pos[2]);
 
-        double tmp = yaw_rate * delta_t;
-        particles[i].x += velocity * (sin(particles[i].theta+tmp) - sin(particles[i].theta)) / yaw_rate + pos_x_noise(gen);
-        particles[i].y += velocity * (-cos(particles[i].theta+tmp) + cos(particles[i].theta)) / yaw_rate + pos_y_noise(gen);
-        particles[i].theta += tmp + pos_theta_noise(gen);
+        if(yaw_rate!=0.0){
+            double tmp = yaw_rate * delta_t;
+            particles[i].x += velocity * (sin(particles[i].theta+tmp) - sin(particles[i].theta)) / yaw_rate + pos_x_noise(gen);
+            particles[i].y += velocity * (-cos(particles[i].theta+tmp) + cos(particles[i].theta)) / yaw_rate + pos_y_noise(gen);
+            particles[i].theta += tmp + pos_theta_noise(gen);
+        } else {
+            // avoid devide-by-zero!
+            particles[i].x += velocity * delta_t * cos(particles[i].theta);
+            particles[i].y += velocity * delta_t * sin(particles[i].theta);
+            // theta doesn't change
+        }
     }
 #ifdef DEBUG
     std::cout<<"PF prediction(): " << num_particles << " particles." << std::endl;

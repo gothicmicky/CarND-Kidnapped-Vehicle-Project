@@ -1,9 +1,6 @@
 /*
  * particle_filter.h
- *
  * 2D particle filter class.
- *  Created on: Dec 12, 2016
- *      Author: Tiffany Huang
  */
 
 #ifndef PARTICLE_FILTER_H_
@@ -28,10 +25,8 @@ struct Particle {
 class ParticleFilter {
 	
 	// Number of particles to draw
-	int num_particles; 
-	
-	
-	
+	int num_particles;
+
 	// Flag, if filter is initialized
 	bool is_initialized;
 	

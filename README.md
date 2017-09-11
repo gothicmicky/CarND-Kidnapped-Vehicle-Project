@@ -1,10 +1,20 @@
 # Kidnapped Vehicle Project (Particle Filter)
+![alt text][demo]
+
+[demo]: ./media/demo.gif
 
 ---
 ## Project Overview
 A robot has been kidnapped and transported to a new location! Luckily it has a map of this location, a (noisy) GPS estimate of its initial location, and lots of (noisy) sensor and control data.
 
 In this project a 2 dimensional particle filter in C++ has been implemented. The particle filter is given a map and some initial localization information (analogous to what a GPS would provide). At each time step the filter also gets observation and control data. 
+
+## Additional References
+- [Particle Filter in Robotics](http://robots.stanford.edu/papers/thrun.pf-in-robotics-uai02.pdf)
+- [Vehicle tracking using projective particle filter](https://www.researchgate.net/publication/46300863_Vehicle_Tracking_Using_Projective_Particle_Filter)
+- [Overlapped Vehicle Tracking via Enhancement of Particle Filter with Adaptive Resampling Algorithm](http://ijssst.info/Vol-12/No-3/paper7.pdf)
+- [Unscented Kalman filters and Particle Filter methods for nonlinear state estimation](http://ac.els-cdn.com/S2212017313006427/1-s2.0-S2212017313006427-main.pdf?_tid=e36cf932-5fd6-11e7-b1c1-00000aab0f27&acdnat=1499076400_c257df4f75a916408abbf14f078be8e2)
+
 
 ## Dependencies
 * cmake >= 3.5
