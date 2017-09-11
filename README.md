@@ -91,7 +91,7 @@ Sensor input values to the particle filter are provided by the simulator to the 
 
 ["sense_observations_y"]
 
-#### The Map*
+#### The Map
 `map_data.txt` includes the position of landmarks (in meters) on an arbitrary Cartesian coordinate system. Each row has three columns
 1. x position
 2. y position
@@ -127,7 +127,7 @@ Output values provided by the c++ program to the simulator.
 
 > **NOTES**
 > The vehicle's coordinate system is NOT the map coordinate system.
-> The observations are given in the VEHICLE'S coordinate system. However, the particles are located according to the MAP'S coordinate system. Transformation (rotation + translation) is required. See more details on tranformation [here](https://www.willamette.edu/~gorr/classes/GeneralGraphics/Transforms/transforms2d.htm) and the equations [here](http://planning.cs.uiuc.edu/node99.html)
+> Transformation (rotation + translation) is required. See more details on tranformation [here](https://www.willamette.edu/~gorr/classes/GeneralGraphics/Transforms/transforms2d.htm) and the equations [here](http://planning.cs.uiuc.edu/node99.html)
 
 ## Success Criteria
 1. **Accuracy**: the particle filter should localize vehicle position and yaw to within the values specified in the parameters `max_translation_error` and `max_yaw_error` in `src/main.cpp`.
